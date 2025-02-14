@@ -2,6 +2,19 @@
 <html>
 <head>
     <title>ÆTHER</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ÆTHER">
+    <meta property="og:description" content="Electronic Music Production Agency">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AETHERLIVE/AETHERLIVE.GITHUB.AI/main/text-1739414566378.png">
+    <meta property="og:url" content="https://aetherlive.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ÆTHER">
+    <meta name="twitter:description" content="Electronic Music Production Agency">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/AETHERLIVE/AETHERLIVE.GITHUB.AI/main/text-1739414566378.png">
+
     <style>
         * {
             margin: 0;
@@ -14,9 +27,10 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start; /* Changed from center */
             justify-content: center;
             font-family: 'Arial', sans-serif;
+            padding-left: 5%; /* Added left padding */
         }
 
         .logo-container {
@@ -25,8 +39,10 @@
             padding: 2rem;
             position: absolute;
             top: 35%;
+            left: 5%; /* Added left positioning */
             transform: translateY(-50%);
             box-shadow: 12px 12px 0 #e63946;
+            margin-left: 0; /* Ensure no margin */
         }
 
         img {
@@ -34,12 +50,14 @@
             height: auto;
             display: block;
             filter: contrast(120%);
+            margin-left: -5%; /* Pull image further left */
         }
 
         .contact {
             position: fixed;
             bottom: 2rem;
-            text-align: center;
+            left: 5%; /* Align with logo */
+            text-align: left; /* Changed from center */
         }
 
         a {
@@ -50,6 +68,7 @@
             border: 2px solid #000;
             transition: all 0.3s ease;
             background: #fff;
+            margin-left: 0; /* Remove default margin */
         }
 
         a:hover {
@@ -59,15 +78,25 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-left: 2%;
+            }
+            
             .logo-container {
                 box-shadow: 6px 6px 0 #e63946;
                 padding: 1rem;
                 width: 95vw;
+                left: 2%;
+            }
+            
+            img {
+                margin-left: -2%;
             }
             
             a {
                 font-size: 1rem;
                 padding: 0.8rem 1.5rem;
+                left: 2%;
             }
         }
     </style>
