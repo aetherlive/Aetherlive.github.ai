@@ -10,7 +10,7 @@
         }
 
         body {
-            background: #0a0a0a;
+            background: #2a2a2a;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -20,51 +20,51 @@
             overflow: hidden;
         }
 
-        /* Enhanced 3D Mercury Effect */
+        /* Vivid Mercury Droplets */
         .mercury-drips {
             position: absolute;
             width: 300%;
             height: 400%;
-            animation: flow 25s linear infinite;
+            animation: flow 15s linear infinite;
             background: 
                 radial-gradient(circle at 10% 15%, 
-                    rgba(200,200,200,0.2) 0%, 
-                    transparent 25%),
-                radial-gradient(circle at 30% 40%, 
-                    rgba(180,180,180,0.15) 0%, 
+                    rgba(255,255,255,0.4) 0%, 
                     transparent 30%),
-                radial-gradient(circle at 70% 25%, 
-                    rgba(220,220,220,0.25) 0%, 
+                radial-gradient(circle at 30% 40%, 
+                    rgba(230,230,230,0.35) 0%, 
                     transparent 35%),
+                radial-gradient(circle at 70% 25%, 
+                    rgba(255,255,255,0.5) 0%, 
+                    transparent 40%),
                 linear-gradient(
                     45deg,
-                    rgba(150,150,150,0.05) 0%,
-                    rgba(100,100,100,0.2) 50%,
-                    rgba(150,150,150,0.05) 100%
+                    rgba(200,200,200,0.1) 0%,
+                    rgba(150,150,150,0.3) 50%,
+                    rgba(200,200,200,0.1) 100%
                 );
             mask-image: 
                 radial-gradient(circle at 50% 50%, 
-                    black 25%,
-                    transparent 35%),
-                radial-gradient(circle at 80% 20%, 
                     black 15%,
                     transparent 25%),
+                radial-gradient(circle at 80% 20%, 
+                    black 10%,
+                    transparent 20%),
                 linear-gradient(
                     to bottom,
-                    transparent 40%,
-                    black 60%,
-                    transparent 80%
+                    transparent 30%,
+                    black 50%,
+                    transparent 70%
                 );
             -webkit-mask-composite: source-in;
             mask-composite: intersect;
-            filter: blur(2px) contrast(300%) brightness(1.2);
+            filter: blur(1px) contrast(400%) brightness(1.5);
             z-index: 1;
-            mix-blend-mode: hard-light;
+            mix-blend-mode: screen;
         }
 
         @keyframes flow {
-            0% { transform: translateY(-150%) rotate(12deg) scale(1.2); }
-            100% { transform: translateY(150%) rotate(12deg) scale(1.2); }
+            0% { transform: translateY(-150%) rotate(12deg) scale(1.1); }
+            100% { transform: translateY(150%) rotate(12deg) scale(1.1); }
         }
 
         .mercury-drips::after {
@@ -73,14 +73,14 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 50% 50%, 
-                rgba(255,255,255,0.15) 0%,
+                rgba(255,255,255,0.3) 0%,
                 transparent 60%);
-            animation: mercury-pulse 4s ease-in-out infinite;
+            animation: mercury-pulse 3s ease-in-out infinite;
         }
 
         @keyframes mercury-pulse {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.1); }
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
         }
 
         .logo-container {
@@ -88,23 +88,23 @@
             z-index: 2;
             max-width: 80vw;
             filter: 
-                drop-shadow(0 0 15px rgba(255,255,255,0.15))
-                contrast(130%);
-            perspective: 1000px;
+                drop-shadow(0 0 25px rgba(255,255,255,0.2))
+                contrast(150%);
+            perspective: 800px;
         }
 
         img {
             width: 100%;
             height: auto;
-            border: 3px solid rgba(255,255,255,0.1);
-            background: rgba(0,0,0,0.4);
+            border: 4px solid rgba(255,255,255,0.2);
+            background: rgba(50,50,50,0.6);
             padding: 25px;
             position: relative;
             transform-style: preserve-3d;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(6px);
         }
 
-        /* Liquid Chrome Effect */
+        /* Liquid Metal Effect */
         img::before {
             content: '';
             position: absolute;
@@ -116,71 +116,49 @@
                 linear-gradient(
                     45deg,
                     rgba(255,255,255,0) 0%,
-                    rgba(255,255,255,0.5) 50%,
+                    rgba(255,255,255,0.7) 50%,
                     rgba(255,255,255,0) 100%
                 ),
                 repeating-linear-gradient(
                     -45deg,
-                    rgba(0,0,0,0.1) 0px,
-                    rgba(0,0,0,0.1) 2px,
+                    rgba(0,0,0,0.15) 0px,
+                    rgba(0,0,0,0.15) 2px,
                     transparent 2px,
                     transparent 4px
                 );
-            animation: metal-shine 6s linear infinite;
+            animation: metal-shine 4s linear infinite;
             mix-blend-mode: overlay;
             z-index: -1;
         }
 
         @keyframes metal-shine {
-            0% { transform: translateX(-150%) rotate(30deg); }
-            100% { transform: translateX(150%) rotate(30deg); }
+            0% { transform: translateX(-150%) rotate(25deg); }
+            100% { transform: translateX(150%) rotate(25deg); }
         }
 
         .contact {
             position: fixed;
-            bottom: 30px;
+            bottom: 40px;
             z-index: 3;
         }
 
         a {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.95);
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 12px 30px;
-            border: 1px solid rgba(255,255,255,0.3);
-            background: rgba(0,0,0,0.25);
+            font-size: 1.3rem;
+            padding: 15px 35px;
+            border: 2px solid rgba(255,255,255,0.4);
+            background: rgba(40,40,40,0.6);
             transition: all 0.3s ease;
-            letter-spacing: 1.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255,255,255,0.2),
-                transparent
-            );
-            animation: button-glow 3s infinite;
-        }
-
-        @keyframes button-glow {
-            0% { left: -100%; }
-            100% { left: 100%; }
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
         a:hover {
             background: rgba(255,255,255,0.95);
-            color: #000;
+            color: #2a2a2a;
             border-color: transparent;
-            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            box-shadow: 0 0 25px rgba(255,255,255,0.4);
         }
     </style>
 </head>
